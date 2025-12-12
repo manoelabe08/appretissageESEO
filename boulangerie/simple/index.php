@@ -11,14 +11,12 @@ include 'config.php';
 </head>
 <body>
     <div class="container">
-        <h1>🥐 Bienvenue à la Boulangerie</h1>
-
+        <h1>Bienvenue à la Boulangerie</h1>
         <nav>
-            <a href="sucre.php" class="btn">🍰 Produits Sucrés</a>
-            <a href="sale.php" class="btn">🥪 Produits Salés</a>
-            <a href="commande.php" class="btn btn-primary">📝 Passer Commande</a>
+            <a href="sucre.php" class="btn">Produits Sucrés</a>
+            <a href="sale.php" class="btn">Produits Salés</a>
+            <a href="commande.php" class="btn btn-primary">Passer Commande</a>
         </nav>
-
         <div class="intro">
             <p>Découvrez nos délicieux produits de boulangerie.</p>
             <p>Sélectionnez votre catégorie pour voir nos offres, ou passez directement votre commande!</p>

@@ -12,15 +12,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pages = $_POST['pages'];
     $domaine = $_POST['domaine'];
     $codeAuteur = $_POST['codeAuteur'];
-    
-   
+
+
     if (empty($titre) || empty($pages) || empty($domaine) || empty($codeAuteur)) {
         $message = "Tous les champs sont obligatoires!";
     } else {
-        
+
         $sql = "INSERT INTO livre (titre, pages, domaine, codeAuteur)
                 VALUES ('$titre', $pages, '$domaine', '$codeAuteur')";
-        
+
         if ($conn->query($sql) === TRUE) {
             $message = "Livre ajouté avec succès! Redirection...";
             echo "<script>setTimeout(function(){ window.location.href='liste.php'; }, 2000);</script>";
@@ -40,40 +40,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <div class="container">
-        <h1>➕ Ajouter un livre</h1>
-        
+        <h1>Ajouter un livre</h1>
+
         <nav class="navbar">
             <ul>
-                <li><a href="accueil.php">🏠 Accueil</a></li>
-                <li><a href="liste.php">📖 Liste des livres</a></li>
-                <li><a href="ajouter.php">➕ Ajouter un livre</a></li>
-                <li><a href="supprimer.php">🗑️ Supprimer un livre</a></li>
-                <li><a href="rechercher.php">🔍 Rechercher un livre</a></li>
+                <li><a href="accueil.php">Accueil</a></li>
+                <li><a href="liste.php">Liste des livres</a></li>
+                <li><a href="ajouter.php">Ajouter un livre</a></li>
+                <li><a href="supprimer.php">Supprimer un livre</a></li>
+                <li><a href="rechercher.php">Rechercher un livre</a></li>
             </ul>
         </nav>
-        
+
         <?php if ($message): ?>
             <div class="message <?= strpos($message, 'reussi') ? 'success' : 'error' ?>">
                 <?= $message ?>
             </div>
         <?php endif; ?>
-        
+
         <form method="POST" class="form">
             <div class="form-group">
                 <label for="titre">Titre :</label>
                 <input type="text" id="titre" name="titre" required>
             </div>
-            
+
             <div class="form-group">
                 <label for="pages">Pages :</label>
                 <input type="number" id="pages" name="pages" required>
             </div>
-            
+
             <div class="form-group">
                 <label for="domaine">Domaine :</label>
                 <input type="text" id="domaine" name="domaine" placeholder="ex: Roman, Science-Fiction" required>
             </div>
-            
+
             <div class="form-group">
                 <label for="codeAuteur">Auteur :</label>
                 <select id="codeAuteur" name="codeAuteur" required>
@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     ?>
                 </select>
             </div>
-            
+
             <button type="submit" class="btn">Ajouter</button>
         </form>
     </div>

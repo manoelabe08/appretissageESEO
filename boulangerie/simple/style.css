@@ -34,7 +34,6 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* Navigation */
 nav {
     display: flex;
     gap: 10px;
@@ -56,7 +55,6 @@ nav a:hover {
     background: #764ba2;
 }
 
-/* Boutons */
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -81,7 +79,6 @@ nav a:hover {
     background: #218838;
 }
 
-/* Produits */
 .produits {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -114,7 +111,6 @@ nav a:hover {
     font-size: 14px;
 }
 
-/* Formulaire */
 .form-commande {
     background: #f9f9f9;
     padding: 20px;
@@ -146,7 +142,6 @@ nav a:hover {
     border-color: #667eea;
 }
 
-/* Récapitulatif */
 .recap {
     background: #f0f8ff;
     padding: 20px;

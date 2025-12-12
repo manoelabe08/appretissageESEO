@@ -1,4 +1,4 @@
-// Gestion de la navigation active
+
 document.addEventListener('DOMContentLoaded', function () {
     const currentLocation = location.pathname;
     const menuItems = document.querySelectorAll('.navbar-menu a');
@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Smooth scroll pour les ancres
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();

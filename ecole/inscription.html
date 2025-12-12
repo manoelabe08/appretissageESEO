@@ -10,26 +10,20 @@
 </head>
 
 <body>
-    <!-- LIEN RETOUR -->
     <p><a href="index.html" class="retour-link">Retour à l'accueil</a></p>
 
-    <!-- TITRE -->
     <h1>Formulaire d'inscription</h1>
 
-    <!-- ALERTE BOOTSTRAP (TP 3) -->
     <div class="alert alert-warning" role="alert">
         Attention : le cours du soir coûte 10% plus cher !
     </div>
 
-    <!-- FORMULAIRE -->
     <form>
-        <!-- CHAMP TEXTE : PRÉNOM -->
         <div class="form-group">
             <label for="prenom">Prénom :</label>
             <input type="text" id="prenom" name="prenom" required><br><br>
         </div>
 
-        <!-- BOUTONS RADIO : FORMATION -->
         <div class="form-group">
             <p><strong>Choisissez une formation :</strong></p>
 
@@ -43,30 +37,23 @@
             <label for="marketing">Marketing Digital (1200€)</label><br><br>
         </div>
 
-        <!-- CASE À COCHER : COURS SOIR -->
         <div class="form-group">
             <input type="checkbox" id="soir" name="cours_soir">
             <label for="soir">Cours du soir (+10%)</label><br><br>
         </div>
 
-        <!-- CHAMP NUMÉRIQUE : PARTICIPANTS -->
         <div class="form-group">
             <label for="participants">Nombre de participants :</label>
             <input type="number" id="participants" name="participants" min="1" value="1"><br><br>
         </div>
 
-        <!-- BOUTON CALCUL DEVIS (TP 3 : classe Bootstrap) -->
-        <!-- TP 4 : Ajouter onclick="calculerDevis()" -->
         <button type="button" class="btn btn-success" onclick="calculerDevis()">
             Calculer le devis
         </button>
     </form>
 
-    <!-- ZONE D'AFFICHAGE DU DEVIS -->
     <p id="resultat" style="margin-top: 20px; font-weight: bold; color: green;"></p>
 
-    <!-- TP 2 : Les styles CSS vont dans css/style.css -->
-    <!-- TP 4 : Le JavaScript va dans js/script.js -->
     <script src="js/script.js"></script>
 </body>
 

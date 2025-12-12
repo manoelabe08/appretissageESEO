@@ -13,7 +13,7 @@
     <header class="header">
         <nav class="navbar">
             <div class="navbar-brand">
-                <h1>📚 Apprentissage MANOEL ABE</h1>
+                <h1>Apprentissage MANOEL ABE</h1>
             </div>
             <ul class="navbar-menu">
                 <li><a href="../index.html">Accueil</a></li>
@@ -35,7 +35,7 @@
     <!-- HUB HEADER -->
     <section class="hub-header">
         <div class="container">
-            <h1>📚 Gestion de Bibliothèque</h1>
+            <h1>Gestion de Bibliothèque</h1>
             <p>Système complet de gestion de livres avec PHP et MySQL</p>
         </div>
     </section>
@@ -96,7 +96,21 @@
     <!-- FOOTER -->
     <footer class="footer" style="margin-top: 3rem;">
         <div class="container">
-            <p>&copy; 2025 Apprentissage MANOEL ABE | Bibliothèque</p>
+            <p>&copy;
+                <script>
+                    const startYear = 2025;
+                    const currentYear = new Date().getFullYear();
+                    document.write(
+                        startYear === currentYear
+                            ? startYear
+                            : startYear + " - " + currentYear
+                    );
+                </script>
+                | Projet d'Apprentissage Web de MANOEL ABE |
+                3<sup>ème</sup> année Ingénieur ESEO - Paris Vélizy |
+                Tous droits réservés – reproduction interdite sans mention de la source.
+                | Bibliothèque
+            </p>
         </div>
     </footer>
 </body>

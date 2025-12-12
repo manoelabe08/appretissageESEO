@@ -4,20 +4,18 @@ include 'db.php';
 $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $code = $_POST['code'];
-    
+
     if (empty($code)) {
         $message = "Veuillez entrer le code du livre!";
     } else {
-        // Vérifier que le livre existe
         $sql_check = "SELECT * FROM livre WHERE code = $code";
         $result_check = $conn->query($sql_check);
-        
+
         if ($result_check->num_rows === 0) {
             $message = "Livre non trouvé!";
         } else {
-            // Supprimer le livre
             $sql = "DELETE FROM livre WHERE code = $code";
-            
+
             if ($conn->query($sql) === TRUE) {
                 $message = "Livre supprimé avec succès!";
             } else {
@@ -38,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="container">
         <h1>Supprimer un livre</h1>
-        
+
         <nav class="navbar">
             <ul>
                 <li><a href="accueil.php">Accueil</a></li>
@@ -48,19 +46,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <li><a href="rechercher.php">Rechercher un livre</a></li>
             </ul>
         </nav>
-        
+
         <?php if ($message): ?>
             <div class="message <?= strpos($message, 'Reussi') ? 'success' : 'error' ?>">
                 <?= $message ?>
             </div>
         <?php endif; ?>
-        
+
         <form method="POST" class="form">
             <div class="form-group">
                 <label for="code">Code du livre :</label>
                 <input type="number" id="code" name="code" placeholder="Entrez le code du livre" required>
             </div>
-            
+
             <button type="submit" class="btn btn-danger">Supprimer</button>
         </form>
     </div>

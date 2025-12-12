@@ -8,29 +8,22 @@
 </head>
 <body>
     <div class="container">
-        <h1>📝 Passer une Commande</h1>
-
+        <h1>Passer une Commande</h1>
         <nav>
-            <a href="index.php">🏠 Accueil</a>
-            <a href="sucre.php">🍰 Sucrés</a>
-            <a href="sale.php">🥪 Salés</a>
+            <a href="index.php">ccueil</a>
+            <a href="sucre.php">Sucrés</a>
+            <a href="sale.php">Salés</a>
         </nav>
-
         <form method="POST" action="resultat.php" class="form-commande">
-            <!-- CLIENT INFO -->
             <div class="form-group">
                 <label for="nom">Nom :</label>
                 <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
             </div>
-
             <div class="form-group">
                 <label for="prenom">Prénom :</label>
                 <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
             </div>
-
-            <!-- PRODUITS SUCRÉS -->
-            <h2>🍰 Produits Sucrés</h2>
-
+            <h2>Produits Sucrés</h2>
             <div class="form-group">
                 <label for="sucre">Choisir :</label>
                 <select id="sucre" name="sucre" required>
@@ -40,15 +33,11 @@
                     <option value="pain_suisse">Pain Suisse - 3€</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <label for="qty_sucre">Quantité :</label>
                 <input type="number" id="qty_sucre" name="qty_sucre" min="0" max="5" value="0">
             </div>
-
-            <!-- PRODUITS SALÉS -->
-            <h2>🥪 Produits Salés</h2>
-
+            <h2>Produits Salés</h2>
             <div class="form-group">
                 <label for="sale">Choisir :</label>
                 <select id="sale" name="sale" required>
@@ -58,13 +47,11 @@
                     <option value="quiche_saumon">Quiche au Saumon - 5€</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <label for="qty_sale">Quantité :</label>
                 <input type="number" id="qty_sale" name="qty_sale" min="0" max="5" value="0">
             </div>
-
-            <button type="submit" class="btn">💰 Commander</button>
+            <button type="submit" class="btn">Commander</button>
         </form>
     </div>
 </body>

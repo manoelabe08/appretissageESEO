@@ -87,7 +87,21 @@
     <!-- FOOTER -->
     <footer class="footer" style="margin-top: 3rem;">
         <div class="container">
-            <p>&copy; 2025 Apprentissage MANOEL ABE | Boulangerie</p>
+            <p>&copy; 2024 -
+                <script>
+                    const startYear = 2025;
+                    const currentYear = new Date().getFullYear();
+                    document.write(
+                        startYear === currentYear
+                            ? startYear
+                            : startYear + " - " + currentYear
+                    );
+                </script>
+                | Projet d'Apprentissage Web de MANOEL ABE |
+                3<sup>ème</sup> année Ingénieur ESEO - Paris Vélizy |
+                Tous droits réservés – reproduction interdite sans mention de la source.
+                | Boulangerie
+            </p>
         </div>
     </footer>
 </body>
