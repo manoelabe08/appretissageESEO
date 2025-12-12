@@ -6,9 +6,9 @@ $sql = "SELECT code, titre, pages, domaine,
         FROM livre
         JOIN auteur ON livre.codeAuteur = auteur.codeAuteur
         ORDER BY titre";
-
 $result = $conn->query($sql);
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -20,7 +20,6 @@ $result = $conn->query($sql);
 <body>
     <div class="container">
         <h1>Liste des livres</h1>
-        
         <nav class="navbar">
             <ul>
                 <li><a href="accueil.php">Accueil</a></li>
@@ -30,7 +29,6 @@ $result = $conn->query($sql);
                 <li><a href="rechercher.php">Rechercher un livre</a></li>
             </ul>
         </nav>
-        
         <?php
         if ($result->num_rows > 0) {
             echo "<table class='table'>";
@@ -41,7 +39,6 @@ $result = $conn->query($sql);
             echo "<th>Domaine</th>";
             echo "<th>Auteur</th>";
             echo "</tr>";
-            
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
                 echo "<td>" . $row['code'] . "</td>";
@@ -55,7 +52,6 @@ $result = $conn->query($sql);
         } else {
             echo "<p>Aucun livre trouvé.</p>";
         }
-        
         $conn->close();
         ?>
     </div>
