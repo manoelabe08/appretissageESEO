@@ -6,7 +6,7 @@ $recherche = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $recherche = $_POST['recherche'];
-    
+
     if (!empty($recherche)) {
         $sql = "SELECT code, titre, pages, domaine,
                 CONCAT(prenomA, ' ', nomA) AS auteur
@@ -15,9 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 WHERE titre LIKE '%$recherche%'
                 OR domaine LIKE '%$recherche%'
                 ORDER BY titre";
-        
+
         $result = $conn->query($sql);
-        
+
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 $livres[] = $row;
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <div class="container">
         <h1>Rechercher un livre</h1>
-        
+
         <nav class="navbar">
             <ul>
                 <li><a href="accueil.php">Accueil</a></li>
@@ -47,18 +47,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <li><a href="rechercher.php">Rechercher un livre</a></li>
             </ul>
         </nav>
-        
+
         <form method="POST" class="form">
             <div class="form-group">
                 <label for="recherche">Rechercher :</label>
-                <input type="text" id="recherche" name="recherche" 
-                       placeholder="Titre ou domaine..." 
+                <input type="text" id="recherche" name="recherche"
+                       placeholder="Titre ou domaine..."
                        value="<?= htmlspecialchars($recherche) ?>" required>
             </div>
-            
+
             <button type="submit" class="btn">Rechercher</button>
         </form>
-        
+
         <?php
         if (!empty($livres)) {
             echo "<h2>Résultats (" . count($livres) . " livre(s) trouvé(s))</h2>";
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "<th>Domaine</th>";
             echo "<th>Auteur</th>";
             echo "</tr>";
-            
+
             foreach ($livres as $livre) {
                 echo "<tr>";
                 echo "<td>" . $livre['code'] . "</td>";
@@ -82,9 +82,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             echo "</table>";
         } elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && empty($livres)) {
-            echo "<p>❌ Aucun livre trouvé pour '" . htmlspecialchars($recherche) . "'</p>";
+            echo "<p>Aucun livre trouvé pour '" . htmlspecialchars($recherche) . "'</p>";
         }
-        
+
         $conn->close();
         ?>
     </div>

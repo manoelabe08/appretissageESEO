@@ -74,7 +74,7 @@
                 );
             </script>
             | Projet d'Apprentissage web de MANOEL ABE |
-            3<sup>ème</sup> année Ingénieur ESEO - Paris Vélizy |
+            3<sup>ème</sup> année Ingénieur ESEO - Paris Vélizy |<br>
             Tous droits réservés – reproduction interdite sans mention de la source.
         </p>
     </div>

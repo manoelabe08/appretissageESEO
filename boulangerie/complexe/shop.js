@@ -14,12 +14,12 @@ form.addEventListener('submit', function (e) {
     let message = '';
 
     if (nom === '') {
-        message = '❌ Veuillez entrer votre nom!';
+        message = 'Veuillez entrer votre nom!';
         erreur = true;
     }
 
     if (produitsCoches.length === 0) {
-        message = '❌ Veuillez sélectionner au moins un produit!';
+        message = 'Veuillez sélectionner au moins un produit!';
         erreur = true;
     }
 
@@ -48,7 +48,7 @@ form.addEventListener('submit', function (e) {
         detailsCommande += `<br>Emballage cadeau = +0,50€`;
     }
 
-    detailsCommande += `<br><br><strong style="font-size: 24px; color: green;">💰 Total : ${total.toFixed(2)}€</strong>`;
+    detailsCommande += `<br><br><strong style="font-size: 24px; color: green;"> Total : ${total.toFixed(2)}€</strong>`;
 
     resultatDiv.innerHTML = detailsCommande;
     resultatDiv.className = 'resultat success';

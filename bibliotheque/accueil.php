@@ -12,7 +12,7 @@ include 'db.php';
 <body>
     <div class="container">
         <h1>Bienvenue à la Bibliothèque MANOEL ABE</h1>
-        
+
         <nav class="navbar">
             <ul>
                 <li><a href="accueil.php">Accueil</a></li>
@@ -22,9 +22,9 @@ include 'db.php';
                 <li><a href="rechercher.php">Rechercher un livre</a></li>
             </ul>
         </nav>
-        
+
         <div class="content">
-            <p>Bienvenue sur notre plateforme de gestion de la bibliothèque MANOEL ABE.</p>
+            <p>Bienvenue sur notre plateforme de gestion de la bibliothèque MANOEL ABE.</p><br>
             <p>Vous pouvez gérer les livres à partir du menu ci-dessus.</p>
         </div>
     </div>
