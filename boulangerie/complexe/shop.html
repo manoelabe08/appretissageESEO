@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande Boulangerie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🥐 Commande Boulangerie</h1>
+        <p>Bienvenue! Passez votre commande ci-dessous.</p>
+
+        <!-- FORMULAIRE -->
+        <form id="commandeForm">
+            <!-- NOM CLIENT -->
+            <div class="form-group">
+                <label for="nom">Votre nom :</label>
+                <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+            </div>
+
+            <!-- PRODUITS (CASES À COCHER) -->
+            <h2>Sélectionnez vos produits :</h2>
+
+            <div class="produits">
+                <!-- CROISSANT -->
+                <div class="produit">
+                    <input type="checkbox" id="croissant" name="produits" value="croissant" data-prix="1">
+                    <label for="croissant">🥐 Croissant - 1€</label>
+                    <input type="number" id="qty-croissant" class="quantite" min="1" max="10" value="1"
+                        placeholder="Qty">
+                </div>
+
+                <!-- PAIN SUISSE -->
+                <div class="produit">
+                    <input type="checkbox" id="pain-suisse" name="produits" value="pain-suisse" data-prix="2">
+                    <label for="pain-suisse">🍞 Pain Suisse - 2€</label>
+                    <input type="number" id="qty-pain-suisse" class="quantite" min="1" max="10" value="1"
+                        placeholder="Qty">
+                </div>
+
+                <!-- ÉCLAIR CHOCOLAT -->
+                <div class="produit">
+                    <input type="checkbox" id="eclair" name="produits" value="eclair" data-prix="3">
+                    <label for="eclair">🍫 Éclair Chocolat - 3€</label>
+                    <input type="number" id="qty-eclair" class="quantite" min="1" max="10" value="1" placeholder="Qty">
+                </div>
+            </div>
+
+            <!-- EMBALLAGE CADEAU -->
+            <div class="form-group">
+                <input type="checkbox" id="emballage" name="emballage">
+                <label for="emballage">🎁 Emballage cadeau (+0,50€)</label>
+            </div>
+
+            <!-- BOUTON CALCUL -->
+            <button type="submit" class="btn">💰 Calculer le total</button>
+        </form>
+
+        <!-- RÉSULTAT -->
+        <div id="resultat" class="resultat"></div>
+    </div>
+
+    <script src="shop.js"></script>
+</body>
+
+</html>
