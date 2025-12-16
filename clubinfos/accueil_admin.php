@@ -14,7 +14,7 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Accueil Admin - Club Informatique</title>
+    <title>Accueil Page Admin - Club Informatique</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="logo.png">
 </head>
